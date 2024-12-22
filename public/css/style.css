@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: 0;
+  font-family: "Montserrat";
+}
+
+body {
+  background: rgba(235, 238, 243, 0.801);
+  background-blend-mode: darken;
+}
+
+/* PAGE INDEX */
+
+.connexion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.connexion h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.fconnexion {
+  background-color: #f6f8f8;
+  padding: 25px;
+  box-shadow: 0 0 12px rgba(43, 42, 42, 0.2);
+  border-radius: 8px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.fconnexion p {
+  margin-bottom: 10px;
+}
+
+.fconnexion input[type="text"],
+input[type="password"] {
+  margin: 8px 0;
+}
+
+input[type="submit"] {
+  margin-top: 25px;
+  background-color: #2b94c4;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* FIN PAGE INDEX */
+
+/* -------------------------------------------------------------------------------------------------- */
+
+/* MENU PRINCIPAL */
+
+.menu-principal {
+  max-width: 85%;
+  margin: 50px auto;
+  max-height: 100vh;
+}
+
+.nav-titre {
+  display: flex;
+  align-items: center;
+}
+
+.image-user {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.image-user img {
+  width: 100%;
+}
+
+.nav-titre p {
+  margin-left: 8px;
+  margin-bottom: 0px;
+}
+
+.s-nagivation {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 20px;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.s-nagivation h3 {
+  margin-bottom: 10px;
+}
+
+.s-nagivation .navigation {
+  display: grid;
+  grid-template-rows: 1fr;
+  row-gap: 10px;
+  border-radius: 10px;
+  background-color: #f6f8f8;
+  padding: 10px;
+  box-shadow: 0 0 12px rgba(43, 42, 42, 0.2);
+}
+.s-nagivation .navigation .nav-liens {
+  border-bottom: 1px solid rgba(224, 228, 236, 0.801);
+  padding: 8px 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.s-nagivation .navigation .nav-liens:hover {
+  background-color: rgba(224, 228, 236, 0.801);
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.s-nagivation .navigation .nav-liens i {
+  font-size: 18px;
+  margin-right: 15px;
+  color: #2b94c4;
+}
+
+.s-nagivation .navigation .nav-liens a {
+  color: black;
+}
+
+.image-logo {
+  width: 100%;
+}
+
+.image-logo img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* FIN MENU PRINCIPAL */
+
+/* ------------------------------------------------------------------------------------------------- */
+
+/* PAGE AJOUT PRODUIT */
+
+.article {
+  max-width: 85%;
+  margin: 0 auto;
+  max-height: 100vh;
+}
+
+.article h2 {
+  margin: 20px 0;
+}
+
+.article .form p {
+  margin: 5px 0;
+}
+
+.form i {
+  margin-bottom: 10px;
+}
+
+/* FIN PAGE AJOUT PRODUIT  */
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* AJOUT USER */
+
+.passwordshow {
+  position: relative;
+}
+
+table i {
+  font-size: 18px;
+  color: #2b94c4;
+  cursor: pointer;
+}
+
+table .fa-solid.fa-trash {
+  color: red;
+  margin-left: 8px;
+}
+
+.eye {
+  position: absolute;
+  top: 19px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.eyes {
+  position: absolute;
+  top: 15px;
+  right: 8px;
+  cursor: pointer;
+}
+
+/* FIN AJOUT USER */
+
+/* ----------------------------------------------------------------------------------------------- */
+
+.btn-add {
+  width: fit-content;
+  margin-bottom: 20px;
+  background-color: #2b94c4;
+  padding: 5px 20px;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.form {
+  background-color: #f6f8f8;
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.container .cont-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.back_btn {
+  color: #2b94c4;
+  font-weight: 800;
+  text-decoration: 0;
+}
+
+table.table-striped {
+  margin-top: 15px;
+}
+
+.back_btn i,
+.btn-add i {
+  font-size: 17px;
+  margin-right: 5px;
+}
+
+.danger {
+  color: red;
+  font-size: 12px;
+}
+
+.success {
+  color: #2b94c4;
+  font-size: 12px;
+}
+
+.warning {
+  color: #f4a261;
+  font-size: 12px;
+}
+
+input,
+select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(42, 101, 228, 0.2);
+  margin: 2px 0px 5px 0px;
+  outline: none;
+  width: 100%;
+}
+
+input:focus {
+  border: 1px solid rgba(42, 101, 228, 0.4);
+  box-shadow: 0 0 8px rgba(42, 101, 228, 0.4);
+}
