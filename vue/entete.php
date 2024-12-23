@@ -4,6 +4,6 @@
         <div class="image-user">
         <img src="../public/img/user.png" alt="Image de l'utilisateur">
         </div>
-        <p>Bienvenue: <?= !empty($_SESSION['user']) ? $_SESSION['user']:''?></p>
+        <p>Bienvenue <strong><?= !empty($_SESSION['user']) ? $_SESSION['user']:''?></strong></p>
 </div>
 

@@ -46,7 +46,7 @@
         
     </div>
 
-    <h2>Liste des Produits</h2>
+    <h2>Liste des Clients</h2>
 
     <table class="table table-striped">
   <thead class="table-dark">
@@ -67,7 +67,7 @@
             <td><?= $value['phone']?></td>
             <td>
                 <a href="?id=<?= $value['id']?>"><i class="fa-solid fa-pen-to-square"></i></a>
-                <a href="../model/supprimerClient.php"><i class="fa-solid fa-trash"></i></a>
+                <a href="../model/supprimerClient.php/?id=<?= $value['id']?>"><i class="fa-solid fa-trash"></i></a>
             <td>
         </tr>
         <?php
