@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             } else {
                 $_SESSION['message']['text']="Votre username ou mot de passe incorrect !";
                 $_SESSION['message']['type']='danger';
-                header('Location: ../vue/index.php');
+                header('Location: ../index.php');
             }
         } catch (PDOException $e) {
             die("Error" . $e->getMessage());
@@ -40,10 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $_SESSION['message']['text']="Veuillez remplir tous les champs svp !";
         $_SESSION['message']['type']='danger';
-        header('Location: ../vue/index.php');
+        header('Location: ../index.php');
     }
 } else {
-    header('location: ../vue/index.php');
+    header('location: ../index.php');
 }
 
 

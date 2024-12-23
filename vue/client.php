@@ -2,7 +2,7 @@
     session_start();
 
     if (empty(@$_SESSION['etatConnexion'])) {
-    header('Location:index.php');
+    header('Location:../index.php');
     }
 
     include_once '../model/function.php';
@@ -67,7 +67,7 @@
             <td><?= $value['phone']?></td>
             <td>
                 <a href="?id=<?= $value['id']?>"><i class="fa-solid fa-pen-to-square"></i></a>
-                <a href="../model/supprimerClient.php/?id=<?= $value['id']?>"><i class="fa-solid fa-trash"></i></a>
+                <a href=""><i class="fa-solid fa-trash"></i></a>
             <td>
         </tr>
         <?php

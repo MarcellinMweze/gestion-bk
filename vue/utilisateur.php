@@ -4,7 +4,7 @@
     include_once '../model/function.php';
 
     if (empty(@$_SESSION['etatConnexion'])) {
-    header('Location:index.php');
+    header('Location:../index.php');
     }
 
     if(!empty($_GET['id'])){
@@ -75,7 +75,7 @@
             <td><?= $value['priorite']?></td>
             <td>
                 <a href="?id=<?= $value['id']?>"><i class="fa-solid fa-pen-to-square"></i></a>
-                <a href="../model/supprimerUser.php/?id=<?= $value['id']?>"><i class="fa-solid fa-trash"></i></a>
+                <a href=""><i class="fa-solid fa-trash"></i></a>
             <td>
         </tr>
         <?php

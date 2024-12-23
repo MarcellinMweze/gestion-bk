@@ -2,7 +2,7 @@
 session_start();
 
 if (empty(@$_SESSION['etatConnexion'])) {
-    header('Location:index.php');
+    header('Location:../index.php');
 }
 
 ?>
@@ -43,6 +43,9 @@ if (empty(@$_SESSION['etatConnexion'])) {
             </div>
             <div class="nav-liens">
             <a href="afficheVente.php"><i class="fa-solid fa-pen-to-square"></i> Modifier Vente</a>
+            </div>
+            <div class="nav-liens">
+            <a href=""><i class="fa-solid fa-chart-line"></i> Tableau de Bord</a>
             </div>
             <div class="nav-liens">
             <a href="../model/deconnexion.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Déconnexion</a>

@@ -11,7 +11,7 @@ function getArticle($id=null){
 
     return $req->fetch();
     }else{
-    $sql="SELECT * FROM article";
+    $sql="SELECT * FROM article ORDER BY nom_article ASC";
 
     $req=$GLOBALS['con']->prepare($sql);
 
@@ -31,7 +31,7 @@ function getClient($id=null){
 
     return $req->fetch();
     }else{
-    $sql="SELECT * FROM client";
+    $sql="SELECT * FROM client ORDER BY nom_client ASC";
 
     $req=$GLOBALS['con']->prepare($sql);
 
@@ -42,11 +42,11 @@ function getClient($id=null){
 }
 
 function getVente(){
-    $sql="SELECT nom_article, nom_client, v.quantite, prix, date_v FROM client AS c, vente AS v, article AS a WHERE v.id_article=a.id AND v.id_client=c.id";
+    $sql="SELECT nom_article, nom_client, v.quantite, prix, date_v, v.id, a.id AS idArticle FROM client AS c, vente AS v, article AS a WHERE v.id_article=a.id AND v.id_client=c.id AND etat=? ORDER BY date_v DESC";
 
     $req=$GLOBALS['con']->prepare($sql);
 
-    $req->execute();
+    $req->execute(array(1));
 
     return $req->fetchAll();
 }
@@ -61,7 +61,7 @@ function getUser($id=null){
 
     return $req->fetch();
     }else{
-        $sql="SELECT * FROM utilisateur";
+        $sql="SELECT * FROM utilisateur ORDER BY nom ASC";
 
         $req=$GLOBALS['con']->prepare($sql);
 

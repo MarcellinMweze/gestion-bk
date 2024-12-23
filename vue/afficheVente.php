@@ -2,11 +2,11 @@
     session_start();
     include_once '../model/function.php';
     if (empty(@$_SESSION['etatConnexion'])) {
-    header('Location:index.php');
+    header('Location:../index.php');
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,6 +22,13 @@
     ?>
     <h2>Nos Ventes</h2>
     <a href="menuprincipal.php" class="back_btn vente"><i class="fa-solid fa-arrow-left"></i>Retour</a>
+    <?php
+                if(!empty($_SESSION['message']['text'])){
+            ?>
+            <p class="<?php echo $_SESSION['message']['type']?>"><?php echo $_SESSION['message']['text']?></p>
+            <?php
+                }
+            ?>
     <table class="table table-striped">
   <thead class="table-dark">
       <th scope="col">Nom du Produit</th>
@@ -29,7 +36,7 @@
       <th scope="col">Quantité</th>
       <th scope="col">Prix</th>
       <th scope="col">Date</th>
-      <th scope="col">Actions</th>
+      <th scope="col" colspan="2">Actions</th>
       <th></th>
     </tr>
   </thead>
@@ -45,9 +52,9 @@
             <td><?= $value['quantite']?></td>
             <td><?= $value['prix']?></td>
             <td><?= date('d/m/Y',strtotime($value['date_v']))?></td>
-            <td>
-                <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
-                <a href=""><i class="fa-solid fa-trash"></i></a>
+            <td colspan="2">
+                <a href=""><i class="fa-solid fa-print"></i></a>
+                <a onclick="annuleVente(<?= $value['id']?>,<?= $value['idArticle']?>,<?= $value['quantite']?>)"><i class="fa-solid fa-ban"></i></a>
             <td>
         </tr>
         <?php
@@ -56,6 +63,20 @@
  ?>
   </tbody>
 </table>
-</div>    
+</div> 
+
+    <script>
+
+        function annuleVente(idVente,idArticle,quantite){
+            if(confirm('Voulez-vous vraiment annuler cette vente ?')){
+                window.location.href="../model/annulerVente.php?idVente="+idVente+"&idArticle="+idArticle+"&quantite="+quantite;
+            }
+        }
+
+    </script>
+    <?php
+        unset($_SESSION['message']['text']);
+        unset($_SESSION['message']['type']);
+    ?>
 </body>
 </html>

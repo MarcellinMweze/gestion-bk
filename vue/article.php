@@ -2,7 +2,7 @@
     session_start();
 
     if (empty(@$_SESSION['etatConnexion'])) {
-    header('Location:index.php');
+    header('Location: ../index.php');
 }
 ?>
 <!DOCTYPE html>
@@ -49,4 +49,3 @@
     ?>
 </body>
 </html>
-
